@@ -5,7 +5,29 @@
 исходить из того, что перед нами файл в неизвестной кодировке.
 Задача: открыть этот файл БЕЗ ОШИБОК вне зависимости от того, в какой кодировке он был создан.
 """
-with open('test_file.txt', 'r', encoding='utf-8') as test:
-    for items in test:
-        item = items.encode('utf-8').decode('utf-8')
-        print(item)
+from chardet import detect
+
+
+# создаем файл
+test = open('test_file.txt', 'w', encoding='utf-8')
+test.write('сетевое программирование \nсокет \nдекоратор')
+test.close()
+
+
+# узнаем кодировку
+with open('test_file.txt', 'rb') as test:
+    content = test.read()
+encode = detect(content)['encoding']
+# print('encoding: ', encode)
+
+
+# открываем файл
+with open('test_file.txt', 'r', encoding=encode) as f_test:
+    content = f_test.read()
+print(content)
+
+
+# with open('test_file.txt', encoding=encoding) as f_test:
+#     for el in f_test:
+#         print(el, end='')
+#     print()
