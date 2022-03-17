@@ -1,0 +1,32 @@
+{
+    "orders": [
+        {
+            "item": "Product 1",
+            "quantity": 0,
+            "price": 0,
+            "buyer": "Jhon",
+            "date": "10-10-2020"
+        },
+        {
+            "item": "Product 2",
+            "quantity": 2,
+            "price": 100,
+            "buyer": "Jhon",
+            "date": "10-10-2020"
+        },
+        {
+            "item": "Product 3",
+            "quantity": 4,
+            "price": 200,
+            "buyer": "Jhon",
+            "date": "10-10-2020"
+        },
+        {
+            "item": "Product 4",
+            "quantity": 6,
+            "price": 300,
+            "buyer": "Jhon",
+            "date": "10-10-2020"
+        }
+    ]
+}
