@@ -1,13 +1,19 @@
 import socket
 import sys
 import json
+import logging
+import logs.server_log_config
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, \
     PRESENCE, TIME, USER, ERROR, DEFAULT_PORT, RESPONDEFAULT_IP_ADDRESS
 from common.utils import get_message, send_message
 
 
+server_log = logging.getLogger('server')
+
+
 def process_client_message(message):
 
+    server_log.debug(f'Обработка сообщения от клиента: {message}')
     if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
             and USER in message and message[USER][ACCOUNT_NAME] == 'Guest':
         return {RESPONSE: 200}
@@ -27,11 +33,11 @@ def main():
         if not 65535 >= listen_port >= 1024:
             raise ValueError
     except IndexError:
-        print('После параметра -\'p\' необходимо указать номер порта.')
+        server_log.critical(f'После параметра -\'p\' необходимо указать номер порта.')
         sys.exit(1)
     except ValueError:
-        print(
-            'Порт должен быть указан в пределах от 1024 до 65535.')
+        server_log.critical(f'Попытка запуска сервера с некорректного порта {listen_port}.'
+                            'Порт должен быть указан в пределах от 1024 до 65535')
         sys.exit(1)
 
     try:
@@ -41,9 +47,10 @@ def main():
             listen_address = ''
 
     except IndexError:
-        print(
-            'После параметра \'a\'- необходимо указать адрес, который будет слушать сервер.')
+        server_log.critical('После параметра \'a\'- необходимо указать адрес, который будет слушать сервер.')
         sys.exit(1)
+
+    server_log.info(f'Сервер запущен на порту: {listen_port}.')
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -53,14 +60,16 @@ def main():
 
     while True:
         client, client_address = transport.accept()
+        server_log.info(f'Установлено соедение с {client_address}')
         try:
             message_from_client = get_message(client)
-            print(message_from_client)
+            server_log.debug(f'Получено сообщение {message_from_client}')
             response = process_client_message(message_from_client)
+            server_log.info(f'Cформирован ответ клиенту {response}')
             send_message(client, response)
             client.close()
         except (ValueError, json.JSONDecodeError):
-            print('Принято некорретное сообщение от клиента.')
+            server_log.critical('Принято некорретное сообщение от клиента')
             client.close()
 
 

@@ -1,0 +1,10 @@
+2022-04-05 16:24:09,874   DEBUG      server_log_config.py   Отладочная информация
+2022-04-05 16:24:09,874   INFO       server_log_config.py   Информационное сообщение
+2022-04-05 16:24:09,874   WARNING    server_log_config.py   Предупреждение
+2022-04-05 16:24:09,874   ERROR      server_log_config.py   Ошибка
+2022-04-05 16:24:09,874   CRITICAL   server_log_config.py   Критическая ошибка
+2022-04-05 16:24:24,401   INFO       server.py              Сервер запущен на порту: 7777.
+2022-04-05 16:24:29,385   INFO       server.py              Установлено соедение с ('127.0.0.1', 50611)
+2022-04-05 16:24:29,385   DEBUG      server.py              Получено сообщение {'action': 'presence', 'time': 1649161469.3857772, 'user': {'account_name': 'Guest'}}
+2022-04-05 16:24:29,385   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649161469.3857772, 'user': {'account_name': 'Guest'}}
+2022-04-05 16:24:29,385   INFO       server.py              Cформирован ответ клиенту {'response': 200}
