@@ -4,14 +4,15 @@ import socket
 import time
 import logging
 import logs.client_log_config
+from common.decorators import Log
 from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, \
     RESPONSE, ERROR, DEFAULT_IP_ADDRESS, DEFAULT_PORT
 from common.utils import get_message, send_message
 
-
 client_log = logging.getLogger('client')
 
 
+@Log()
 def create_presence(account_name='Guest'):
 
     out = {
@@ -25,7 +26,8 @@ def create_presence(account_name='Guest'):
     return out
 
 
-def process_ans(message):
+@Log()
+def process_ans(message, ):
     client_log.info(f'Обработка сообщения от сервера: {message}')
     if RESPONSE in message:
         if message[RESPONSE] == 200:
