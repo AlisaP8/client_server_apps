@@ -1,0 +1,40 @@
+2022-04-10 17:48:51,059   DEBUG      decorators.py          Вызов функции: arg_parser с параметрами (), {}.Модуль: __main__.
+2022-04-10 17:48:51,059   INFO       server.py              Сервер запущен на порту: 7777, по адресу: 
+2022-04-10 17:49:00,315   INFO       server.py              Установлено соединение с ПК ('127.0.0.1', 61130)
+2022-04-10 17:49:00,315   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649598540.3143797, 'user': {'account_name': 'Guest'}}
+2022-04-10 17:49:00,316   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'presence', 'time': 1649598540.3143797, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=328, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61130)>), {}.Модуль: __main__.
+2022-04-10 17:49:00,412   INFO       server.py              Установлено соединение с ПК ('127.0.0.1', 61131)
+2022-04-10 17:49:00,415   DEBUG      decorators.py          Вызов функции: arg_parser с параметрами (), {}.Модуль: __main__.
+2022-04-10 17:49:00,415   INFO       server.py              Сервер запущен на порту: 7777, по адресу: 
+2022-04-10 17:49:00,428   INFO       server.py              Установлено соединение с ПК ('127.0.0.1', 61132)
+2022-04-10 17:49:00,429   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649598540.412449, 'user': {'account_name': 'Guest'}}
+2022-04-10 17:49:00,429   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'presence', 'time': 1649598540.412449, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=236, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61131)>), {}.Модуль: __main__.
+2022-04-10 17:49:00,519   INFO       server.py              Установлено соединение с ПК ('127.0.0.1', 61133)
+2022-04-10 17:49:00,520   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649598540.4284604, 'user': {'account_name': 'Guest'}}
+2022-04-10 17:49:00,520   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'presence', 'time': 1649598540.4284604, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=340, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61132)>), {}.Модуль: __main__.
+2022-04-10 17:49:01,029   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649598540.5195246, 'user': {'account_name': 'Guest'}}
+2022-04-10 17:49:01,029   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'presence', 'time': 1649598540.5195246, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=336, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61133)>), {}.Модуль: __main__.
+2022-04-10 17:49:41,357   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'message', 'time': 1649598581.0758295, 'account_name': 'Guest', 'mess_text': 'hi'}
+2022-04-10 17:49:41,357   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'message', 'time': 1649598581.0758295, 'account_name': 'Guest', 'mess_text': 'hi'}, [('Guest', 'hi')], <socket.socket fd=328, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61130)>), {}.Модуль: __main__.
+2022-04-10 17:49:53,397   INFO       server.py              Клиент ('127.0.0.1', 61130) отключился от сервера.
+2022-04-10 17:50:20,421   INFO       server.py              Установлено соединение с ПК ('127.0.0.1', 61139)
+2022-04-10 17:50:20,438   DEBUG      decorators.py          Вызов функции: arg_parser с параметрами (), {}.Модуль: __main__.
+2022-04-10 17:50:20,439   INFO       server.py              Сервер запущен на порту: 7777, по адресу: 
+2022-04-10 17:50:20,466   INFO       server.py              Установлено соединение с ПК ('127.0.0.1', 61140)
+2022-04-10 17:50:20,467   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649598620.4211113, 'user': {'account_name': 'Guest'}}
+2022-04-10 17:50:20,467   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'presence', 'time': 1649598620.4211113, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61139)>), {}.Модуль: __main__.
+2022-04-10 17:50:20,476   INFO       server.py              Установлено соединение с ПК ('127.0.0.1', 61141)
+2022-04-10 17:50:20,476   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649598620.4661438, 'user': {'account_name': 'Guest'}}
+2022-04-10 17:50:20,476   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'presence', 'time': 1649598620.4661438, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=348, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61140)>), {}.Модуль: __main__.
+2022-04-10 17:50:20,569   INFO       server.py              Установлено соединение с ПК ('127.0.0.1', 61142)
+2022-04-10 17:50:20,569   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649598620.4762213, 'user': {'account_name': 'Guest'}}
+2022-04-10 17:50:20,569   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'presence', 'time': 1649598620.4762213, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=296, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61141)>), {}.Модуль: __main__.
+2022-04-10 17:50:21,079   DEBUG      server.py              Обработка сообщения от клиента: {'action': 'presence', 'time': 1649598620.554367, 'user': {'account_name': 'Guest'}}
+2022-04-10 17:50:21,079   DEBUG      decorators.py          Вызов функции: process_client_message с параметрами ({'action': 'presence', 'time': 1649598620.554367, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=328, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61142)>), {}.Модуль: __main__.
+2022-04-10 17:50:24,590   INFO       server.py              Клиент ('127.0.0.1', 61139) отключился от сервера.
+2022-04-10 17:50:24,590   INFO       server.py              Клиент ('127.0.0.1', 61140) отключился от сервера.
+2022-04-10 17:50:24,590   INFO       server.py              Клиент ('127.0.0.1', 61141) отключился от сервера.
+2022-04-10 17:50:24,590   INFO       server.py              Клиент ('127.0.0.1', 61142) отключился от сервера.
+2022-04-10 17:50:30,649   INFO       server.py              Клиент ('127.0.0.1', 61133) отключился от сервера.
+2022-04-10 17:50:31,159   INFO       server.py              Клиент ('127.0.0.1', 61131) отключился от сервера.
+2022-04-10 17:50:35,199   INFO       server.py              Клиент ('127.0.0.1', 61132) отключился от сервера.

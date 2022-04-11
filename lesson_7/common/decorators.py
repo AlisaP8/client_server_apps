@@ -4,7 +4,7 @@ import sys
 import traceback
 
 
-if sys.argv[0].find('client') == -1:
+if sys.argv[0].find('client.py') == -1:
     log = logging.getLogger('server')
 else:
     log = logging.getLogger('client')
@@ -15,11 +15,21 @@ class Log:
         def log_saver(*args, **kwargs):
             res = func(*args, **kwargs)
             log.debug(f'Вызов функции: {func.__name__} с параметрами {args}, {kwargs}.'
-                      f'Модуль: {func.__module__}.'
-                      f'Вызов из функции {traceback.format_stack()[0].strip().split()[-1]}.'
-                      f'Вызов из функции {inspect.stack()[1][3]}')
+                      f'Модуль: {func.__module__}.')
             return res
         return log_saver
+
+
+# class Log:
+#     def __call__(self, func):
+#         def log_saver(*args, **kwargs):
+#             res = func(*args, **kwargs)
+#             log.debug(f'Вызов функции: {func.__name__} с параметрами {args}, {kwargs}.'
+#                       f'Модуль: {func.__module__}.'
+#                       f'Вызов из функции {traceback.format_stack()[0].strip().split()[-1]}.'
+#                       f'Вызов из функции {inspect.stack()[1][3]}')
+#             return res
+#         return log_saver
 
 
 # def logger(func):
